@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Encuesta de Preferencias Musicales</title>
+    <style>
+        body {
+            background-color: #ffc0cb; /* rosa claro */
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: #8b008b;
+        }
+
+        label {
+            color: #4b0082;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #4b0082;
+            color: #ffffff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #800080;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Encuesta de Preferencias Musicales</h2>
+
+<form action="/submit_form" method="post">
+    <label for="name">Nombre:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="age">Edad:</label><br>
+    <input type="number" id="age" name="age" required><br><br>
+
+    <label for="genres">Géneros musicales favoritos:</label><br>
+    <select id="genres" name="genres" multiple required>
+        <option value="rock">Rock</option>
+        <option value="pop">Pop</option>
+        <option value="hiphop">Hip Hop</option>
+        <option value="electronic">Música Electrónica</option>
+        <option value="kpop">K-pop</option>
+        <option value="others">Otros</option>
+    </select><br><br>
+
+    <label for="artists">Artistas o bandas favoritas:</label><br>
+    <input type="text" id="artists" name="artists" required><br><br>
+
+    <label for="frequency">Frecuencia de asistencia a conciertos:</label><br>
+    <input type="radio" id="rarely" name="frequency" value="rarely" required>
+    <label for="rarely">Raramente</label><br>
+    <input type="radio" id="sometimes" name="frequency" value="sometimes" required>
+    <label for="sometimes">A veces</label><br>
+    <input type="radio" id="frequently" name="frequency" value="frequently" required>
+    <label for="frequently">Frecuentemente</label><br><br>
+
+    <label for="platforms">Plataformas de streaming de música utilizadas:</label><br>
+    <input type="checkbox" id="spotify" name="platforms" value="spotify">
+    <label for="spotify">Spotify</label><br>
+    <input type="checkbox" id="appleMusic" name="platforms" value="appleMusic">
+    <label for="appleMusic">Apple Music</label><br>
+    <input type="checkbox" id="amazonMusic" name="platforms" value="amazonMusic">
+    <label for="amazonMusic">Amazon Music</label><br>
+    <input type="checkbox" id="others" name="platforms" value="others">
+    <label for="others">Otros</label><br><br>
+
+    <label for="opinions">Opiniones sobre la escena musical local:</label><br>
+    <textarea id="opinions" name="opinions" rows="4" cols="50" required></textarea><br><br>
+
+    <input type="submit" value="Enviar">
+</form>
+
+</body>
+</html>
+
+
